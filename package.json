@@ -3,16 +3,14 @@
   "version": "0.0.3",
   "private": true,
   "type": "module",
-  "emdash": {
-    "label": "Blog",
-    "seed": "seed/seed.json"
-  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "deploy": "astro build && wrangler deploy",
-    "typecheck": "astro check"
+    "typecheck": "astro check",
+    "fmt:fix": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.0.0",
@@ -28,6 +26,11 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.7",
     "@cloudflare/workers-types": "^5.20260820.1",
+    "oxfmt": "^0.68.0",
     "wrangler": "^4.124.0"
+  },
+  "emdash": {
+    "label": "Blog",
+    "seed": "seed/seed.json"
   }
 }

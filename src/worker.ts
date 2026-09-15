@@ -3,6 +3,6 @@ import handler, { createScheduledHandler, PluginBridge } from "@emdash-cms/cloud
 export { PluginBridge };
 
 export default {
-	...handler,
-	scheduled: createScheduledHandler(),
+  ...handler,
+  scheduled: createScheduledHandler(),
 } satisfies ExportedHandler;
