@@ -1,19 +1,21 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-emdash-site",
+  "name": "pages-emdash",
   "main": "./src/worker.ts",
   "compatibility_date": "2026-02-24",
   "compatibility_flags": ["nodejs_compat"],
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "my-emdash-site",
+      "database_name": "pages-emdash-data",
+      "migrations_dir": "../../migrations",
+      "database_id": "44ca8ef8-3db9-40a7-8ea4-5dc862cfa8de",
     },
   ],
   "r2_buckets": [
     {
       "binding": "MEDIA",
-      "bucket_name": "my-emdash-media",
+      "bucket_name": "pages-emdash-media",
     },
   ],
   // Worker Loader for plugin sandboxing
