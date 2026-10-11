@@ -7,6 +7,10 @@ import { defineConfig, fontProviders } from "astro/config";
 import emdash from "emdash/astro";
 
 export default defineConfig({
+  i18n: {
+    defaultLocale: "ja",
+    locales: ["ja"],
+  },
   output: "server",
   adapter: cloudflare(),
   image: {
@@ -21,7 +25,6 @@ export default defineConfig({
       plugins: [formsPlugin()],
       sandboxed: [webhookNotifier],
       sandboxRunner: sandbox(),
-      marketplace: "https://marketplace.emdashcms.com",
     }),
   ],
   fonts: [
