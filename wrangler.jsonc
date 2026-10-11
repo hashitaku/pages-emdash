@@ -28,4 +28,8 @@
   "triggers": {
     "crons": ["* * * * *"],
   },
+  // Persist Worker logs to Workers Logs (dashboard) for 7 days
+  "observability": {
+    "enabled": true,
+  },
 }
