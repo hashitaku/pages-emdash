@@ -4,6 +4,14 @@
   "main": "./src/worker.ts",
   "compatibility_date": "2026-02-24",
   "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "hashitaku.dev",
+      "custom_domain": true,
+    },
+  ],
   "d1_databases": [
     {
       "binding": "DB",
@@ -18,17 +26,14 @@
       "bucket_name": "pages-emdash-media",
     },
   ],
-  // Worker Loader for plugin sandboxing
   "worker_loaders": [
     {
       "binding": "LOADER",
     },
   ],
-  // General maintenance cron trigger
   "triggers": {
     "crons": ["* * * * *"],
   },
-  // Persist Worker logs to Workers Logs (dashboard) for 7 days
   "observability": {
     "enabled": true,
   },
